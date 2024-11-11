@@ -12,6 +12,11 @@ const port = process.env.PORT || 3000; // El puerto 3000 es local
 app.use(cors());
 app.use(bodyParser.json());
 
+// Servir el archivo index.html directamente desde la raíz del proyecto
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+  });
+
 const conversationHistory = [
     { role: 'user', content: 'Hola' }
     // Agrega más mensajes según sea necesario
