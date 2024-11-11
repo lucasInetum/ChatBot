@@ -6,7 +6,7 @@ const fs = require('fs'); // Para manejar la escritura de archivos
 const path = require('path'); // Para trabajar con rutas de archivos
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // El puerto 3000 es local
 
 // Middleware para manejar CORS
 app.use(cors());
