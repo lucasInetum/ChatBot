@@ -177,8 +177,12 @@
         if (!localStorage.getItem('isSessionActive')) {
             localStorage.setItem('isSessionActive', true);
 
+            const resethistoryUrl = window.location.hostname === 'localhost'
+                    ? 'http://localhost:3000/reset-history'
+                    : 'https://chatbot-x8oh.onrender.com/reset-history';
+
             // Envía una petición al backend para reiniciar el historial
-            fetch('http://localhost:3000/reset-history', {
+            fetch(resethistoryUrl, {
                 method: 'POST',
             }).then(response => response.json())
                 .then(data => {
@@ -222,7 +226,7 @@
                 loginPopup.style.display = 'none';
             }
         }
-        
+
         // Agregar el eventListener al formulario de login para que funcione con "Enter"
         document.getElementById('username').addEventListener('keypress', function (event) {
             if (event.key === 'Enter') {
@@ -258,7 +262,10 @@
                 messageElement.appendChild(messageContent);
                 chatBox.appendChild(messageElement);
 
-                const backendUrl = 'https://chatbot-x8oh.onrender.com'; // Cambia si tu backend está en otro puerto o dominio
+                const backendUrl = window.location.hostname === 'localhost'
+                    ? 'http://localhost:3000/endpoint'
+                    : 'https://chatbot-x8oh.onrender.com/endpoint';
+
 
                 fetch(backendUrl, {
                     method: 'POST',
