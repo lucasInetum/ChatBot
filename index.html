@@ -10,7 +10,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
+            height: 100vh;
             margin: 0;
             background-color: #f4f4f4;
             font-family: '72', sans-serif;
@@ -108,9 +108,7 @@
         .login-btn-container {
             position: absolute;
             top: 10px;
-            /* Ajusta la distancia desde la parte superior */
             right: 20px;
-            /* Ajusta la distancia desde la derecha */
         }
 
         #login-btn {
@@ -136,6 +134,71 @@
 
         em {
             font-style: italic;
+        }
+
+        /* Estilos para pantallas grandes (por encima de 1024px) */
+        @media (min-width: 1025px) {
+            .chat-container {
+                width: 80%;
+                padding: 30px;
+            }
+        }
+
+        /* Estilos responsivos para tablets (pantallas entre 600px y 1024px) */
+        @media (min-width: 600px) and (max-width: 1024px) {
+            .chat-container {
+                width: 95%;
+                max-width: 700px;
+                padding: 15px;
+            }
+
+            .chat-header {
+                font-size: 1.1em;
+                padding: 10px;
+            }
+
+            textarea {
+                width: calc(100% - 80px);
+                height: 35px;
+            }
+
+            button {
+                padding: 8px;
+                margin-left: 8px;
+            }
+        }
+
+        /* Estilos responsivos para móviles pequeños (pantallas menores a 600px) */
+        @media (max-width: 599px) {
+            .chat-container {
+                width: 100%;
+                padding: 10px;
+                max-width: none;
+            }
+
+            .chat-header {
+                font-size: 1em;
+                padding: 8px;
+            }
+
+            textarea {
+                width: calc(100% - 70px);
+                padding: 8px;
+                height: 35px;
+            }
+
+            button {
+                padding: 8px;
+                margin-left: 5px;
+            }
+
+            #login-popup div {
+                width: 90%; /* Ajustar el ancho del popup en móviles pequeños */
+            }
+
+            .message.user .message-content, .message.response {
+                max-width: 90%; /* Aumentar el ancho de los mensajes en móviles */
+            }
         }
     </style>
 </head>
