@@ -14,6 +14,7 @@ app.use(bodyParser.json());
 
 // Servir el archivo index.html directamente desde la raíz del proyecto
 app.get('/', (req, res) => {
+    console.log('Iniciando Chatbot...');
     res.sendFile(path.join(__dirname, 'index.html'));
   });
 
@@ -24,6 +25,7 @@ const conversationHistory = [
 
 app.post('/reset-history', (req, res) => {
     // Reiniciar el historial de conversación
+    console.log('Reiniciando historial de conversación...');
     conversationHistory.length = 0;
     conversationHistory.push({ role: 'user', content: 'Hola' }); // Inicializa con el mensaje de inicio
 
@@ -50,7 +52,7 @@ function parseMessage(text) {
 // Ruta para manejar la petición desde el frontend
 app.post('/endpoint', async (req, res) => {
     const { query, username, password } = req.body; // Recibir las credenciales del frontend
-
+    console.log(`Recibiendo consulta: ${query}`);
     try {
 
 
@@ -68,7 +70,8 @@ app.post('/endpoint', async (req, res) => {
 
         // Configura las credenciales para la autenticación Basic usando las credenciales recibidas
         const basicAuth = Buffer.from(`${username}:${password}`).toString('base64');
-
+        
+        console.log('Enviando solicitud a la API externa...');
         // Hacemos la petición a la API externa
         const apiResponse = await axios.post(
             'https://inetum-integration-suite-demo-ng207k79.it-cpi023-rt.cfapps.eu20-001.hana.ondemand.com/http/chatbot/api/chat',
@@ -85,6 +88,7 @@ app.post('/endpoint', async (req, res) => {
         const contentType = apiResponse.headers['content-type'];
 
         if (contentType === 'application/pdf') {
+            console.log('Recibido PDF desde la API externa');
             // Si la respuesta es un PDF, guardamos el archivo y lo enviamos al frontend para descargarlo
             const pdfBuffer = apiResponse.data;
             const pdfPath = path.join(__dirname, 'archivo.pdf'); // Ruta donde se guardará el PDF
@@ -96,6 +100,7 @@ app.post('/endpoint', async (req, res) => {
             res.setHeader('Content-Disposition', 'attachment; filename="archivo.pdf"');
             res.send(pdfBuffer);
         } else {
+            console.log('Recibida respuesta de texto desde la API externa');
             // Si no es un PDF, procesamos la respuesta normalmente
             const apiResponseData = apiResponse.data.toString('utf-8'); // Convertimos el buffer a string si es necesario
             const formattedResponse = parseMessage(apiResponseData); // Parsear el mensaje para reemplazar asteriscos
@@ -121,6 +126,8 @@ app.post('/endpoint', async (req, res) => {
             if (Buffer.isBuffer(errorData)) {
                 errorData = errorData.toString('utf-8');
             }
+
+            console.error(`Error de la API externa: ${error.response.status} - ${errorData}`);
 
             res.status(error.response.status).json({
                 error: `Error de la API externa: ${error.response.status}`,
