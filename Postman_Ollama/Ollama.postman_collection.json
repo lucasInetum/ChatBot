@@ -1,0 +1,368 @@
+{
+	"info": {
+		"_postman_id": "6fbf07eb-4f87-474d-b034-8016107e47e1",
+		"name": "Ollama",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38862994",
+		"_collection_link": "https://sap-inetum-integracion.postman.co/workspace/I%252BD~11bda184-e798-4359-ae44-a9a551bce082/collection/38862150-6fbf07eb-4f87-474d-b034-8016107e47e1?action=share&source=collection_link&creator=38862994"
+	},
+	"item": [
+		{
+			"name": "Llama 3.2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"model\": \"llama3.2\",\r\n  \"prompt\": \"Why is the sky blue?\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inetum-integration-suite-demo-ng207k79.it-cpi023-rt.cfapps.eu20-001.hana.ondemand.com/http/test/ia",
+					"protocol": "https",
+					"host": [
+						"inetum-integration-suite-demo-ng207k79",
+						"it-cpi023-rt",
+						"cfapps",
+						"eu20-001",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"test",
+						"ia"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Llama 3.2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"model\": \"llama3.2\",\r\n  \"prompt\": \"Why is the sky blue?\",\r\n  \"stream\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://inetum-integration-suite-demo-ng207k79.it-cpi023-rt.cfapps.eu20-001.hana.ondemand.com/http/test/ia",
+							"protocol": "https",
+							"host": [
+								"inetum-integration-suite-demo-ng207k79",
+								"it-cpi023-rt",
+								"cfapps",
+								"eu20-001",
+								"hana",
+								"ondemand",
+								"com"
+							],
+							"path": [
+								"http",
+								"test",
+								"ia"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 17 Oct 2024 18:28:33 GMT"
+						},
+						{
+							"key": "expires",
+							"value": "0"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "sap_messageprocessinglogid",
+							"value": "AGcRV0XDEztRtQRpQXrBe0m9Px-A"
+						},
+						{
+							"key": "sap_mplcorrelationid",
+							"value": "AGcRV0Xwdmrnhu8vsbmsuNTooNhi"
+						},
+						{
+							"key": "sap_pregeneratedmplid",
+							"value": "AGcRV1E57CWsXQJg8uVxJOVhN2ni"
+						},
+						{
+							"key": "sapenablemplattachments",
+							"value": "true"
+						},
+						{
+							"key": "server",
+							"value": "SAP"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-correlationid",
+							"value": "527ec270-cc88-4d49-4b09-5ddb47b1328a"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-vcap-request-id",
+							"value": "527ec270-cc88-4d49-4b09-5ddb47b1328a"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "strict-transport-security",
+							"value": "max-age=31536000; includeSubDomains; preload;"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"model\": \"llama3.2\",\n    \"created_at\": \"2024-10-17T18:28:33.35053025Z\",\n    \"response\": \"The sky appears blue because of a phenomenon called scattering, which occurs when sunlight interacts with the tiny molecules of gases in the Earth's atmosphere.\\n\\nWhen sunlight enters the Earth's atmosphere, it encounters tiny molecules of gases such as nitrogen (N2) and oxygen (O2). These molecules scatter the light in all directions, but they scatter shorter (blue) wavelengths more than longer (red) wavelengths. This is known as Rayleigh scattering, named after the British physicist Lord Rayleigh, who first described the phenomenon in the late 19th century.\\n\\nThe blue light is scattered in all directions by the tiny molecules, which is why we see the sky appear blue during the daytime when the sun is overhead. The longer wavelengths of red and orange light are not scattered as much, so they continue to travel in a more direct path to our eyes, making the sky appear less colorful.\\n\\nHowever, during sunrise and sunset, the angle of the sunlight is lower, and the light has to travel through more of the Earth's atmosphere. This means that even more blue light is scattered away, leaving mainly longer wavelengths of red and orange light to reach our eyes. That's why the sky often appears more reddish or orange during these times.\\n\\nIt's worth noting that the color of the sky can vary depending on factors such as atmospheric conditions, pollution levels, and time of day. But in general, the blue color we see in the sky is a result of the scattering of sunlight by tiny molecules of gases in the atmosphere.\",\n    \"done\": true,\n    \"done_reason\": \"stop\",\n    \"context\": [\n        128006,\n        9125,\n        128007,\n        271,\n        38766,\n        1303,\n        33025,\n        2696,\n        25,\n        6790,\n        220,\n        2366,\n        18,\n        271,\n        128009,\n        128006,\n        882,\n        128007,\n        271,\n        10445,\n        374,\n        279,\n        13180,\n        6437,\n        30,\n        128009,\n        128006,\n        78191,\n        128007,\n        271,\n        791,\n        13180,\n        8111,\n        6437,\n        1606,\n        315,\n        264,\n        25885,\n        2663,\n        72916,\n        11,\n        902,\n        13980,\n        994,\n        40120,\n        84261,\n        449,\n        279,\n        13987,\n        35715,\n        315,\n        45612,\n        304,\n        279,\n        9420,\n        596,\n        16975,\n        382,\n        4599,\n        40120,\n        29933,\n        279,\n        9420,\n        596,\n        16975,\n        11,\n        433,\n        35006,\n        13987,\n        35715,\n        315,\n        45612,\n        1778,\n        439,\n        47503,\n        320,\n        45,\n        17,\n        8,\n        323,\n        24463,\n        320,\n        46,\n        17,\n        570,\n        4314,\n        35715,\n        45577,\n        279,\n        3177,\n        304,\n        682,\n        18445,\n        11,\n        719,\n        814,\n        45577,\n        24210,\n        320,\n        12481,\n        8,\n        93959,\n        810,\n        1109,\n        5129,\n        320,\n        1171,\n        8,\n        93959,\n        13,\n        1115,\n        374,\n        3967,\n        439,\n        13558,\n        64069,\n        72916,\n        11,\n        7086,\n        1306,\n        279,\n        8013,\n        83323,\n        10425,\n        13558,\n        64069,\n        11,\n        889,\n        1176,\n        7633,\n        279,\n        25885,\n        304,\n        279,\n        3389,\n        220,\n        777,\n        339,\n        9478,\n        382,\n        791,\n        6437,\n        3177,\n        374,\n        38067,\n        304,\n        682,\n        18445,\n        555,\n        279,\n        13987,\n        35715,\n        11,\n        902,\n        374,\n        3249,\n        584,\n        1518,\n        279,\n        13180,\n        5101,\n        6437,\n        2391,\n        279,\n        62182,\n        994,\n        279,\n        7160,\n        374,\n        32115,\n        13,\n        578,\n        5129,\n        93959,\n        315,\n        2579,\n        323,\n        19087,\n        3177,\n        527,\n        539,\n        38067,\n        439,\n        1790,\n        11,\n        779,\n        814,\n        3136,\n        311,\n        5944,\n        304,\n        264,\n        810,\n        2167,\n        1853,\n        311,\n        1057,\n        6548,\n        11,\n        3339,\n        279,\n        13180,\n        5101,\n        2753,\n        34966,\n        382,\n        11458,\n        11,\n        2391,\n        64919,\n        323,\n        44084,\n        11,\n        279,\n        9392,\n        315,\n        279,\n        40120,\n        374,\n        4827,\n        11,\n        323,\n        279,\n        3177,\n        706,\n        311,\n        5944,\n        1555,\n        810,\n        315,\n        279,\n        9420,\n        596,\n        16975,\n        13,\n        1115,\n        3445,\n        430,\n        1524,\n        810,\n        6437,\n        3177,\n        374,\n        38067,\n        3201,\n        11,\n        9564,\n        14918,\n        5129,\n        93959,\n        315,\n        2579,\n        323,\n        19087,\n        3177,\n        311,\n        5662,\n        1057,\n        6548,\n        13,\n        3011,\n        596,\n        3249,\n        279,\n        13180,\n        3629,\n        8111,\n        810,\n        63244,\n        819,\n        477,\n        19087,\n        2391,\n        1521,\n        3115,\n        382,\n        2181,\n        596,\n        5922,\n        27401,\n        430,\n        279,\n        1933,\n        315,\n        279,\n        13180,\n        649,\n        13592,\n        11911,\n        389,\n        9547,\n        1778,\n        439,\n        45475,\n        4787,\n        11,\n        25793,\n        5990,\n        11,\n        323,\n        892,\n        315,\n        1938,\n        13,\n        2030,\n        304,\n        4689,\n        11,\n        279,\n        6437,\n        1933,\n        584,\n        1518,\n        304,\n        279,\n        13180,\n        374,\n        264,\n        1121,\n        315,\n        279,\n        72916,\n        315,\n        40120,\n        555,\n        13987,\n        35715,\n        315,\n        45612,\n        304,\n        279,\n        16975,\n        13\n    ],\n    \"total_duration\": 12181621329,\n    \"load_duration\": 2710201960,\n    \"prompt_eval_count\": 31,\n    \"prompt_eval_duration\": 274129000,\n    \"eval_count\": 304,\n    \"eval_duration\": 9155250000\n}"
+				}
+			]
+		},
+		{
+			"name": "Llama 3.2 Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"model\": \"llama3.2\",\r\n  \"prompt\": \"Why is the sky blue?\"\r\n  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://192.168.3.150/",
+					"protocol": "http",
+					"host": [
+						"192",
+						"168",
+						"3",
+						"150"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Llama 3.2",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"model\": \"llama3.2\",\r\n  \"prompt\": \"Why is the sky blue?\",\r\n  \"stream\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://inetum-integration-suite-demo-ng207k79.it-cpi023-rt.cfapps.eu20-001.hana.ondemand.com/http/test/ia",
+							"protocol": "https",
+							"host": [
+								"inetum-integration-suite-demo-ng207k79",
+								"it-cpi023-rt",
+								"cfapps",
+								"eu20-001",
+								"hana",
+								"ondemand",
+								"com"
+							],
+							"path": [
+								"http",
+								"test",
+								"ia"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json;charset=utf-8"
+						},
+						{
+							"key": "date",
+							"value": "Thu, 17 Oct 2024 18:28:33 GMT"
+						},
+						{
+							"key": "expires",
+							"value": "0"
+						},
+						{
+							"key": "pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "sap_messageprocessinglogid",
+							"value": "AGcRV0XDEztRtQRpQXrBe0m9Px-A"
+						},
+						{
+							"key": "sap_mplcorrelationid",
+							"value": "AGcRV0Xwdmrnhu8vsbmsuNTooNhi"
+						},
+						{
+							"key": "sap_pregeneratedmplid",
+							"value": "AGcRV1E57CWsXQJg8uVxJOVhN2ni"
+						},
+						{
+							"key": "sapenablemplattachments",
+							"value": "true"
+						},
+						{
+							"key": "server",
+							"value": "SAP"
+						},
+						{
+							"key": "x-content-type-options",
+							"value": "nosniff"
+						},
+						{
+							"key": "x-correlationid",
+							"value": "527ec270-cc88-4d49-4b09-5ddb47b1328a"
+						},
+						{
+							"key": "x-frame-options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-vcap-request-id",
+							"value": "527ec270-cc88-4d49-4b09-5ddb47b1328a"
+						},
+						{
+							"key": "x-xss-protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "transfer-encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "strict-transport-security",
+							"value": "max-age=31536000; includeSubDomains; preload;"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"model\": \"llama3.2\",\n    \"created_at\": \"2024-10-17T18:28:33.35053025Z\",\n    \"response\": \"The sky appears blue because of a phenomenon called scattering, which occurs when sunlight interacts with the tiny molecules of gases in the Earth's atmosphere.\\n\\nWhen sunlight enters the Earth's atmosphere, it encounters tiny molecules of gases such as nitrogen (N2) and oxygen (O2). These molecules scatter the light in all directions, but they scatter shorter (blue) wavelengths more than longer (red) wavelengths. This is known as Rayleigh scattering, named after the British physicist Lord Rayleigh, who first described the phenomenon in the late 19th century.\\n\\nThe blue light is scattered in all directions by the tiny molecules, which is why we see the sky appear blue during the daytime when the sun is overhead. The longer wavelengths of red and orange light are not scattered as much, so they continue to travel in a more direct path to our eyes, making the sky appear less colorful.\\n\\nHowever, during sunrise and sunset, the angle of the sunlight is lower, and the light has to travel through more of the Earth's atmosphere. This means that even more blue light is scattered away, leaving mainly longer wavelengths of red and orange light to reach our eyes. That's why the sky often appears more reddish or orange during these times.\\n\\nIt's worth noting that the color of the sky can vary depending on factors such as atmospheric conditions, pollution levels, and time of day. But in general, the blue color we see in the sky is a result of the scattering of sunlight by tiny molecules of gases in the atmosphere.\",\n    \"done\": true,\n    \"done_reason\": \"stop\",\n    \"context\": [\n        128006,\n        9125,\n        128007,\n        271,\n        38766,\n        1303,\n        33025,\n        2696,\n        25,\n        6790,\n        220,\n        2366,\n        18,\n        271,\n        128009,\n        128006,\n        882,\n        128007,\n        271,\n        10445,\n        374,\n        279,\n        13180,\n        6437,\n        30,\n        128009,\n        128006,\n        78191,\n        128007,\n        271,\n        791,\n        13180,\n        8111,\n        6437,\n        1606,\n        315,\n        264,\n        25885,\n        2663,\n        72916,\n        11,\n        902,\n        13980,\n        994,\n        40120,\n        84261,\n        449,\n        279,\n        13987,\n        35715,\n        315,\n        45612,\n        304,\n        279,\n        9420,\n        596,\n        16975,\n        382,\n        4599,\n        40120,\n        29933,\n        279,\n        9420,\n        596,\n        16975,\n        11,\n        433,\n        35006,\n        13987,\n        35715,\n        315,\n        45612,\n        1778,\n        439,\n        47503,\n        320,\n        45,\n        17,\n        8,\n        323,\n        24463,\n        320,\n        46,\n        17,\n        570,\n        4314,\n        35715,\n        45577,\n        279,\n        3177,\n        304,\n        682,\n        18445,\n        11,\n        719,\n        814,\n        45577,\n        24210,\n        320,\n        12481,\n        8,\n        93959,\n        810,\n        1109,\n        5129,\n        320,\n        1171,\n        8,\n        93959,\n        13,\n        1115,\n        374,\n        3967,\n        439,\n        13558,\n        64069,\n        72916,\n        11,\n        7086,\n        1306,\n        279,\n        8013,\n        83323,\n        10425,\n        13558,\n        64069,\n        11,\n        889,\n        1176,\n        7633,\n        279,\n        25885,\n        304,\n        279,\n        3389,\n        220,\n        777,\n        339,\n        9478,\n        382,\n        791,\n        6437,\n        3177,\n        374,\n        38067,\n        304,\n        682,\n        18445,\n        555,\n        279,\n        13987,\n        35715,\n        11,\n        902,\n        374,\n        3249,\n        584,\n        1518,\n        279,\n        13180,\n        5101,\n        6437,\n        2391,\n        279,\n        62182,\n        994,\n        279,\n        7160,\n        374,\n        32115,\n        13,\n        578,\n        5129,\n        93959,\n        315,\n        2579,\n        323,\n        19087,\n        3177,\n        527,\n        539,\n        38067,\n        439,\n        1790,\n        11,\n        779,\n        814,\n        3136,\n        311,\n        5944,\n        304,\n        264,\n        810,\n        2167,\n        1853,\n        311,\n        1057,\n        6548,\n        11,\n        3339,\n        279,\n        13180,\n        5101,\n        2753,\n        34966,\n        382,\n        11458,\n        11,\n        2391,\n        64919,\n        323,\n        44084,\n        11,\n        279,\n        9392,\n        315,\n        279,\n        40120,\n        374,\n        4827,\n        11,\n        323,\n        279,\n        3177,\n        706,\n        311,\n        5944,\n        1555,\n        810,\n        315,\n        279,\n        9420,\n        596,\n        16975,\n        13,\n        1115,\n        3445,\n        430,\n        1524,\n        810,\n        6437,\n        3177,\n        374,\n        38067,\n        3201,\n        11,\n        9564,\n        14918,\n        5129,\n        93959,\n        315,\n        2579,\n        323,\n        19087,\n        3177,\n        311,\n        5662,\n        1057,\n        6548,\n        13,\n        3011,\n        596,\n        3249,\n        279,\n        13180,\n        3629,\n        8111,\n        810,\n        63244,\n        819,\n        477,\n        19087,\n        2391,\n        1521,\n        3115,\n        382,\n        2181,\n        596,\n        5922,\n        27401,\n        430,\n        279,\n        1933,\n        315,\n        279,\n        13180,\n        649,\n        13592,\n        11911,\n        389,\n        9547,\n        1778,\n        439,\n        45475,\n        4787,\n        11,\n        25793,\n        5990,\n        11,\n        323,\n        892,\n        315,\n        1938,\n        13,\n        2030,\n        304,\n        4689,\n        11,\n        279,\n        6437,\n        1933,\n        584,\n        1518,\n        304,\n        279,\n        13180,\n        374,\n        264,\n        1121,\n        315,\n        279,\n        72916,\n        315,\n        40120,\n        555,\n        13987,\n        35715,\n        315,\n        45612,\n        304,\n        279,\n        16975,\n        13\n    ],\n    \"total_duration\": 12181621329,\n    \"load_duration\": 2710201960,\n    \"prompt_eval_count\": 31,\n    \"prompt_eval_duration\": 274129000,\n    \"eval_count\": 304,\n    \"eval_duration\": 9155250000\n}"
+				}
+			]
+		},
+		{
+			"name": "Mistral",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"model\": \"mistral\",\r\n  \"prompt\": \"Why is the sky blue?\",\r\n  \"stream\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://inetum-integration-suite-demo-ng207k79.it-cpi023-rt.cfapps.eu20-001.hana.ondemand.com/http/test/ia",
+					"protocol": "https",
+					"host": [
+						"inetum-integration-suite-demo-ng207k79",
+						"it-cpi023-rt",
+						"cfapps",
+						"eu20-001",
+						"hana",
+						"ondemand",
+						"com"
+					],
+					"path": [
+						"http",
+						"test",
+						"ia"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "09dc8b4d-9912-422d-be7b-e1286e3ab408$jTSiFVBX_CyJ1X0321p7_uIXnQIHfofLDgBY5oMigRk=",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "sb-53a4a1a8-3bfb-46c5-96d6-2e49bff72d26!b57365|it-rt-inetum-integration-suite-demo-ng207k79!b18631",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
